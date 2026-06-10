@@ -12,7 +12,7 @@
  Rotate Array
  Missing Number
 
-  2-sum
+1.  2-sum
   class Solution {
     public int[] twoSum(int[] nums, int target) {
         // Pair each value with its original index
