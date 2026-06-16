@@ -1,0 +1,11 @@
+PATTERN: Sort + Greedy
+TIME: O(n log n) | SPACE: O(1)
+
+PATTERN: Two Pointer
+TIME: O(n) | SPACE: O(1)
+
+PATTERN: Hash Map
+TIME: O(n) | SPACE: O(n)
+
+PATTERN: Sliding Window
+TIME: O(n) | SPACE: O(k)
