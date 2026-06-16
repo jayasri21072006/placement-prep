@@ -564,3 +564,17 @@ class Solution {
         return (int) (expectedSum - actualSum);
     }
 }
+
+
+
+
+
+
+
+Rotate Right by k
+=
+Reverse Entire Array
++
+Reverse First k Elements
++
+Reverse Remaining Elements
