@@ -681,3 +681,568 @@ class Solution {
         return maxLen;
     }
 }
+
+
+
+
+
+
+LeetCode Logo
+Problem List
+Debugging...
+Debugging...
+
+
+
+
+
+
+
+
+
+0
+0Streaks
+Now or Never!
+DCC Badge
+
+avatar
+Avatar
+Jayasri _T
+Access all features with our Premium subscription!
+myLists
+My Lists
+notebook
+Notebook
+progress
+Progress
+points
+Points
+Try New Features
+Orders
+My Playgrounds
+Settings
+Appearance
+Sign Out
+Premium
+Description
+Accepted
+Accepted
+Editorial
+Editorial
+Solutions
+Solutions
+Submissions
+Submissions
+
+
+Code
+Testcase
+Testcase
+Test Result
+8. String to Integer (atoi)
+Solved
+Medium
+Topics
+premium lock icon
+Companies
+Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer.
+
+The algorithm for myAtoi(string s) is as follows:
+
+Whitespace: Ignore any leading whitespace (" ").
+Signedness: Determine the sign by checking if the next character is '-' or '+', assuming positivity if neither present.
+Conversion: Read the integer by skipping leading zeros until a non-digit character is encountered or the end of the string is reached. If no digits were read, then the result is 0.
+Rounding: If the integer is out of the 32-bit signed integer range [-231, 231 - 1], then round the integer to remain in the range. Specifically, integers less than -231 should be rounded to -231, and integers greater than 231 - 1 should be rounded to 231 - 1.
+Return the integer as the final result.
+
+ 
+
+Example 1:
+
+Input: s = "42"
+
+Output: 42
+
+Explanation:
+
+The underlined characters are what is read in and the caret is the current reader position.
+Step 1: "42" (no characters read because there is no leading whitespace)
+         ^
+Step 2: "42" (no characters read because there is neither a '-' nor '+')
+         ^
+Step 3: "42" ("42" is read in)
+           ^
+Example 2:
+
+Input: s = " -042"
+
+Output: -42
+
+Explanation:
+
+Step 1: "   -042" (leading whitespace is read and ignored)
+            ^
+Step 2: "   -042" ('-' is read, so the result should be negative)
+             ^
+Step 3: "   -042" ("042" is read in, leading zeros ignored in the result)
+               ^
+Example 3:
+
+Input: s = "1337c0d3"
+
+Output: 1337
+
+Explanation:
+
+Step 1: "1337c0d3" (no characters read because there is no leading whitespace)
+         ^
+Step 2: "1337c0d3" (no characters read because there is neither a '-' nor '+')
+         ^
+Step 3: "1337c0d3" ("1337" is read in; reading stops because the next character is a non-digit)
+             ^
+Example 4:
+
+Input: s = "0-1"
+
+Output: 0
+
+Explanation:
+
+Step 1: "0-1" (no characters read because there is no leading whitespace)
+         ^
+Step 2: "0-1" (no characters read because there is neither a '-' nor '+')
+         ^
+Step 3: "0-1" ("0" is read in; reading stops because the next character is a non-digit)
+          ^
+Example 5:
+
+Input: s = "words and 987"
+
+Output: 0
+
+Explanation:
+
+Reading stops at the first non-digit character 'w'.
+
+ 
+
+Constraints:
+
+0 <= s.length <= 200
+s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.
+ 
+
+Seen this question in a real interview before?
+1/6
+Yes
+No
+Accepted
+2,486,746/11.8M
+Acceptance Rate
+21.1%
+Topics
+icon
+Companies
+Similar Questions
+Discussion (950)
+
+Choose a type
+
+
+
+Copyright © 2026 LeetCode. All rights reserved.
+
+6.3K
+
+
+950
+
+185 Online
+Java
+Auto
+
+
+
+
+
+n = -1;
+            }
+            i++;
+        }
+
+        int result = 0;
+
+        while (i < n && Character.isDigit(s.charAt(i))) {
+
+            int digit = s.charAt(i) - '0';
+
+            // Overflow check
+            if (result > Integer.MAX_VALUE / 10 ||
+                (result == Integer.MAX_VALUE / 10 &&
+                 digit > Integer.MAX_VALUE % 10)) {
+
+                return sign == 1
+                        ? Integer.MAX_VALUE
+                        : Integer.MIN_VALUE;
+            }
+
+            result = result * 10 + digit;
+            i++;
+        }
+
+        return result * sign;
+    }
+}
+2627282930313233343536252420212223171819
+Saved
+You must run your code first
+Longest Valid Parentheses - LeetCode
+Problem List
+909 Questions
+String to Integer (atoi)
+
+
+8. String to Integer (atoi)
+Med.
+
+1309. Decrypt String from Alphabet to Integer Mapping
+Easy
+
+12. Integer to Roman
+Med.
+
+13. Roman to Integer
+Easy
+
+273. Integer to English Words
+Hard
+
+989. Add to Array-Form of Integer
+Easy
+
+2457. Minimum Addition to Make Integer Beautiful
+Med.
+
+7. Reverse Integer
+Med.
+
+343. Integer Break
+Med.
+
+397. Integer Replacement
+Med.
+
+2571. Minimum Operations to Reduce an Integer to 0
+Med.
+
+2749. Minimum Operations to Make the Integer Zero
+Med.
+
+3131. Find the Integer Added to Array I
+Easy
+
+3132. Find the Integer Added to Array II
+Med.
+
+2417. Closest Fair Integer
+Med.
+
+3959. Check Good Integer
+Easy
+
+1290. Convert Binary Number in a Linked List to Integer
+Easy
+
+2787. Ways to Express an Integer as Sum of Powers
+Med.
+
+926. Flip String to Monotone Increasing
+Med.
+
+1055. Shortest Way to Form String
+Med.
+
+2027. Minimum Moves to Convert String
+Easy
+
+2109. Adding Spaces to a String
+Med.
+
+2633. Convert Object to JSON String
+Med.
+
+2759. Convert JSON String to Object
+Hard
+
+3639. Minimum Time to Activate String
+Med.
+
+3675. Minimum Operations to Transform String
+Med.
+
+2485. Find the Pivot Integer
+Easy
+
+1317. Convert Integer to the Sum of Two No-Zero Integers
+Easy
+
+1449. Form Largest Integer With Digits That Add up to Target
+Hard
+
+806. Number of Lines To Write String
+Easy
+
+1653. Minimum Deletions to Make String Balanced
+Med.
+
+1957. Delete Characters to Make Fancy String
+Easy
+
+2287. Rearrange Characters to Make Target String
+Easy
+
+2337. Move Pieces to Obtain a String
+Med.
+
+2486. Append Characters to String to Make Subsequence
+Med.
+
+2645. Minimum Additions to Make Valid String
+Med.
+
+2976. Minimum Cost to Convert String I
+Med.
+
+2977. Minimum Cost to Convert String II
+Hard
+
+3039. Apply Operations to Make String Empty
+Med.
+
+3666. Minimum Operations to Equalize Binary String
+Hard
+
+3863. Minimum Operations to Sort a String
+Med.
+
+1009. Complement of Base 10 Integer
+Easy
+
+1015. Smallest Integer Divisible by K
+Med.
+
+3783. Mirror Distance of an Integer
+Easy
+
+1541. Minimum Insertions to Balance a Parentheses String
+Med.
+
+1573. Number of Ways to Split a String
+Med.
+
+1758. Minimum Changes To Make Alternating Binary String
+Easy
+
+2380. Time Needed to Rearrange a Binary String
+Med.
+
+3085. Minimum Deletions to Make String K-Special
+Med.
+
+3365. Rearrange K Substrings to Form Target String
+Med.
+
+3579. Minimum Steps to Convert String with Operations
+Hard
+
+3864. Minimum Cost to Partition a Binary String
+Hard
+
+3922. Minimum Flips to Make Binary String Coherent
+Med.
+
+97. Interleaving String
+Med.
+
+1394. Find Lucky Integer in an Array
+Easy
+
+1533. Find the Index of the Large Integer
+Med.
+
+3471. Find the Largest Almost Missing Integer
+Easy
+
+1016. Binary String With Substrings Representing 1 To N
+Med.
+
+1312. Minimum Insertion Steps to Make a String Palindrome
+Hard
+
+1525. Number of Good Ways to Split a String
+Med.
+
+1830. Minimum Number of Operations to Make String Sorted
+Hard
+
+3750. Minimum Number of Flips to Reverse Binary String
+Easy
+
+1985. Find the Kth Largest Integer in the Array
+Med.
+
+2529. Maximum Count of Positive Integer and Negative Integer
+Easy
+
+2598. Smallest Missing Non-negative Integer After Operations
+Med.
+
+2698. Find the Punishment Number of an Integer
+Med.
+
+3782. Last Remaining Integer After Alternating Deletion Operations
+Hard
+
+1963. Minimum Number of Swaps to Make the String Balanced
+Med.
+
+2434. Using a Robot to Print the Lexicographically Smallest String
+Med.
+
+2515. Shortest Distance to Target String in a Circular Array
+Easy
+
+2914. Minimum Number of Changes to Make Binary String Beautiful
+Med.
+
+3081. Replace Question Marks in String to Minimize Its Value
+Med.
+
+3846. Total Distance to Type a String Using One Finger
+Med.
+
+87. Scramble String
+Hard
+
+344. Reverse String
+Easy
+
+394. Decode String
+Med.
+
+443. String Compression
+Med.
+
+481. Magical String
+Med.
+
+767. Reorganize String
+Med.
+
+796. Rotate String
+Easy
+
+1528. Shuffle String
+Easy
+
+2796. Repeat String
+Easy
+
+2851. String Transformation
+Hard
+
+3597. Partition String
+Med.
+
+1237. Find Positive Integer Solution for a Given Equation
+Med.
+
+2441. Largest Positive Integer That Exists With Its Negative
+Easy
+
+2996. Smallest Missing Integer Greater Than Sequential Prefix Sum
+Easy
+
+3821. Find Nth Smallest Integer With K One Bits
+Hard
+
+1639. Number of Ways to Form a Target String Given a Dictionary
+Hard
+
+1864. Minimum Number of Swaps to Make the Binary String Alternating
+Med.
+
+1888. Minimum Number of Flips to Make the Binary String Alternating
+Med.
+
+1153. String Transforms Into Another String
+Hard
+
+3297. Count Substrings That Can Be Rearranged to Contain a String I
+Med.
+
+3298. Count Substrings That Can Be Rearranged to Contain a String II
+Hard
+
+1281. Subtract the Product and Sum of Digits of an Integer
+Easy
+
+1432. Max Difference You Can Get From Changing an Integer
+Med.
+
+3911. K-th Smallest Remaining Even Integer in Subarray Queries
+Hard
+
+541. Reverse String II
+Easy
+
+567. Permutation in String
+Med.
+
+678. Valid Parenthesis String
+Med.
+
+  class Solution {
+    public int myAtoi(String s) {
+
+        int i = 0;
+        int n = s.length();
+
+        // Skip spaces
+        while (i < n && s.charAt(i) == ' ') {
+            i++;
+        }
+
+        // Sign
+        int sign = 1;
+
+        if (i < n && (s.charAt(i) == '+' || s.charAt(i) == '-')) {
+            if (s.charAt(i) == '-') {
+                sign = -1;
+            }
+            i++;
+        }
+
+        int result = 0;
+
+        while (i < n && Character.isDigit(s.charAt(i))) {
+
+            int digit = s.charAt(i) - '0';
+
+            // Overflow check
+            if (result > Integer.MAX_VALUE / 10 ||
+                (result == Integer.MAX_VALUE / 10 &&
+                 digit > Integer.MAX_VALUE % 10)) {
+
+                return sign == 1
+                        ? Integer.MAX_VALUE
+                        : Integer.MIN_VALUE;
+            }
+
+            result = result * 10 + digit;
+            i++;
+        }
+
+        return result * sign;
+    }
+}
