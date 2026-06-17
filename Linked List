@@ -12,3 +12,475 @@
  Flatten a Multilevel Doubly Linked List
 
 
+
+
+LeetCode Logo
+Problem List
+Debugging...
+Debugging...
+
+
+
+
+
+
+
+
+
+0
+0Streaks
+Now or Never!
+DCC Badge
+
+avatar
+Avatar
+Jayasri _T
+Access all features with our Premium subscription!
+myLists
+My Lists
+notebook
+Notebook
+progress
+Progress
+points
+Points
+Try New Features
+Orders
+My Playgrounds
+Settings
+Appearance
+Sign Out
+Premium
+Description
+Accepted
+Accepted
+Editorial
+Editorial
+Solutions
+Solutions
+Submissions
+Submissions
+
+
+Code
+Testcase
+Testcase
+Test Result
+206. Reverse Linked List
+Solved
+Easy
+Topics
+premium lock icon
+Companies
+Given the head of a singly linked list, reverse the list, and return the reversed list.
+
+ 
+
+Example 1:
+
+
+Input: head = [1,2,3,4,5]
+Output: [5,4,3,2,1]
+Example 2:
+
+
+Input: head = [1,2]
+Output: [2,1]
+Example 3:
+
+Input: head = []
+Output: []
+ 
+
+Constraints:
+
+The number of nodes in the list is the range [0, 5000].
+-5000 <= Node.val <= 5000
+ 
+
+Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+
+ 
+
+Seen this question in a real interview before?
+1/6
+Yes
+No
+Accepted
+6,405,409/7.9M
+Acceptance Rate
+80.7%
+Topics
+icon
+Companies
+Similar Questions
+Discussion (419)
+
+Choose a type
+
+
+
+Copyright © 2026 LeetCode. All rights reserved.
+
+24.6K
+
+
+419
+
+370 Online
+Java
+Auto
+
+
+
+
+
+class Solution {
+    public ListNode reverseList(ListNode head) {
+
+        ListNode prev = null;
+        ListNode curr = head;
+
+        while (curr != null) {
+
+            ListNode next = curr.next;
+
+            curr.next = prev;
+
+            prev = curr;
+            curr = next;
+        }
+
+        return prev;
+    }
+}
+12345678910111213141516171819
+Saved
+You must run your code first
+String to Integer (atoi) - LeetCode
+Problem List
+120 Questions
+ Reverse Linked List
+
+
+206. Reverse Linked List
+Easy
+
+92. Reverse Linked List II
+Med.
+
+1265. Print Immutable Linked List in Reverse
+Med.
+
+141. Linked List Cycle
+Easy
+
+234. Palindrome Linked List
+Easy
+
+707. Design Linked List
+Med.
+
+817. Linked List Components
+Med.
+
+3063. Linked List Frequency
+Easy
+
+142. Linked List Cycle II
+Med.
+
+203. Remove Linked List Elements
+Easy
+
+328. Odd Even Linked List
+Med.
+
+369. Plus One Linked List
+Med.
+
+382. Linked List Random Node
+Med.
+
+725. Split Linked List in Parts
+Med.
+
+876. Middle of the Linked List
+Easy
+
+1367. Linked List in Binary Tree
+Med.
+
+2487. Remove Nodes From Linked List
+Med.
+
+2674. Split a Circular Linked List
+Med.
+
+114. Flatten Binary Tree to Linked List
+Med.
+
+237. Delete Node in a Linked List
+Med.
+
+430. Flatten a Multilevel Doubly Linked List
+Med.
+
+1019. Next Greater Node In Linked List
+Med.
+
+1721. Swapping Nodes in a Linked List
+Med.
+
+3062. Winner of the Linked List Game
+Easy
+
+708. Insert into a Sorted Circular Linked List
+Med.
+
+1836. Remove Duplicates From an Unsorted Linked List
+Med.
+
+2130. Maximum Twin Sum of a Linked List
+Med.
+
+2807. Insert Greatest Common Divisors in Linked List
+Med.
+
+2816. Double a Number Represented as a Linked List
+Med.
+
+3263. Convert Doubly Linked List to Array I
+Easy
+
+3294. Convert Doubly Linked List to Array II
+Med.
+
+1171. Remove Zero Sum Consecutive Nodes from Linked List
+Med.
+
+2046. Sort Linked List Already Sorted Using Absolute Values
+Med.
+
+2095. Delete the Middle Node of a Linked List
+Med.
+
+3217. Delete Nodes From Linked List Present in Array
+Med.
+
+426. Convert Binary Search Tree to Sorted Doubly Linked List
+Med.
+
+1290. Convert Binary Number in a Linked List to Integer
+Easy
+
+1474. Delete N Nodes After M Nodes of a Linked List
+Easy
+
+7. Reverse Integer
+Med.
+
+190. Reverse Bits
+Easy
+
+344. Reverse String
+Easy
+
+493. Reverse Pairs
+Hard
+
+541. Reverse String II
+Easy
+
+917. Reverse Only Letters
+Easy
+
+2612. Minimum Reverse Operations
+Hard
+
+3794. Reverse String Prefix
+Easy
+
+3865. Reverse K Subarrays
+Med.
+
+61. Rotate List
+Med.
+
+86. Partition List
+Med.
+
+143. Reorder List
+Med.
+
+148. Sort List
+Med.
+
+160. Intersection of Two Linked Lists
+Easy
+
+1669. Merge In Between Linked Lists
+Med.
+
+150. Evaluate Reverse Polish Notation
+Med.
+
+2000. Reverse Prefix of Word
+Easy
+
+3925. Concatenate Array With Reverse
+Easy
+
+147. Insertion Sort List
+Med.
+
+986. Interval List Intersections
+Med.
+
+25. Reverse Nodes in k-Group
+Hard
+
+151. Reverse Words in a String
+Med.
+
+345. Reverse Vowels of a String
+Easy
+
+3498. Reverse Degree of a String
+Easy
+
+3722. Lexicographically Smallest String After Reverse
+Med.
+
+1634. Add Two Polynomials Represented as Linked Lists
+Med.
+
+339. Nested List Weight Sum
+Med.
+
+341. Flatten Nested List Iterator
+Med.
+
+2590. Design a Todo List
+Med.
+
+186. Reverse Words in a String II
+Med.
+
+557. Reverse Words in a String III
+Easy
+
+1330. Reverse Subarray To Maximize Array Value
+Hard
+
+2074. Reverse Nodes in Even Length Groups
+Med.
+
+2415. Reverse Odd Levels of Binary Tree
+Med.
+
+2443. Sum of Number and Its Reverse
+Med.
+
+3735. Lexicographically Smallest String After Reverse II
+Hard
+
+3775. Reverse Words With Same Vowel Count
+Med.
+
+83. Remove Duplicates from Sorted List
+Easy
+
+138. Copy List with Random Pointer
+Med.
+
+364. Nested List Weight Sum II
+Med.
+
+1313. Decompress Run-Length Encoded List
+Easy
+
+2877. Create a DataFrame from List
+Easy
+
+1190. Reverse Substrings Between Each Pair of Parentheses
+Med.
+
+2442. Count Number of Distinct Integers After Reverse Operations
+Med.
+
+3750. Minimum Number of Flips to Reverse Binary String
+Easy
+
+3823. Reverse Letters Then Special Characters in a String
+Easy
+
+3918. Sum of Primes Between Number and Its Reverse
+Med.
+
+82. Remove Duplicates from Sorted List II
+Med.
+
+3083. Existence of a Substring in a String and Its Reverse
+Easy
+
+19. Remove Nth Node From End of List
+Med.
+
+109. Convert Sorted List to Binary Search Tree
+Med.
+
+1327. List the Products Ordered in a Period
+Easy
+
+2669. Count Artist Occurrences On Spotify Ranking List
+Easy
+
+1452. People Whose List of Favorite Companies Is Not a Subset of Another List
+Med.
+
+2119. A Number After a Double Reversal
+Easy
+
+3526. Range XOR Queries with Subarray Reversals
+Hard
+
+3650. Minimum Cost Path with Edge Reversals
+Med.
+
+1460. Make Two Arrays Equal by Reversing Subarrays
+Easy
+
+2858. Minimum Edge Reversals So Every Node Is Reachable
+Hard
+
+3029. Minimum Time to Revert Word to Initial State I
+Med.
+
+3031. Minimum Time to Revert Word to Initial State II
+Hard
+
+950. Reveal Cards In Increasing Order
+Med.
+
+
+
+class Solution {
+    public ListNode reverseList(ListNode head) {
+
+        ListNode prev = null;
+        ListNode curr = head;
+
+        while (curr != null) {
+
+            ListNode next = curr.next;
+
+            curr.next = prev;
+
+            prev = curr;
+            curr = next;
+        }
+
+        return prev;
+    }
+}
