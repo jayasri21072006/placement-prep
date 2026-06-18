@@ -215,5 +215,9 @@ class Solution {
         return result;
     }
 }
+| Problem                      | Time     | Space |
+| ---------------------------- | -------- | ----- |
+| 496. Next Greater Element I  | O(n + m) | O(m)  |
+| 503. Next Greater Element II | O(n)     | O(n)  |
 
 
