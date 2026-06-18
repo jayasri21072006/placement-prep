@@ -1311,3 +1311,11 @@ class Solution {
         return next;
     }
 }
+
+
+
+
+
+Time: O(n)
+Space: O(n) (DP array version)
+Space: O(1) (optimized version)
