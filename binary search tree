@@ -70,3 +70,67 @@ class Solution {
         return root;
     }
 }
+
+
+
+450. Delete Node in a BST
+Medium
+Topics
+premium lock icon
+Companies
+Given a root node reference of a BST and a key, delete the node with the given key in the BST. Return the root node reference (possibly updated) of the BST.
+
+Basically, the deletion can be divided into two stages:
+
+Search for a node to remove.
+If the node is found, delete the node.
+
+class Solution {
+
+    public TreeNode deleteNode(TreeNode root, int key) {
+
+        if (root == null) {
+            return null;
+        }
+
+        if (key < root.val) {
+            root.left = deleteNode(root.left, key);
+        }
+
+        else if (key > root.val) {
+            root.right = deleteNode(root.right, key);
+        }
+
+        else {
+
+            // Case 1 & 2
+
+            if (root.left == null) {
+                return root.right;
+            }
+
+            if (root.right == null) {
+                return root.left;
+            }
+
+            // Case 3
+
+            TreeNode successor = findMin(root.right);
+
+            root.val = successor.val;
+
+            root.right = deleteNode(root.right, successor.val);
+        }
+
+        return root;
+    }
+
+    private TreeNode findMin(TreeNode node) {
+
+        while (node.left != null) {
+            node = node.left;
+        }
+
+        return node;
+    }
+}
