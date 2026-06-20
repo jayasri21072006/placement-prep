@@ -1211,3 +1211,71 @@ class Solution {
         return map.get(head);
     }
 }
+
+
+
+
+Code
+Code
+Code Sample
+Testcase
+Testcase
+Test Result
+234. Palindrome Linked List
+Solved
+Easy
+Topics
+premium lock icon
+Companies
+Given the head of a singly linked list, return true if it is a palindrome or false otherwise.
+
+
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public boolean isPalindrome(ListNode head) {
+        ListNode slow = head ;
+        ListNode fast = head ;
+
+        while(fast != null && fast.next != null){
+            slow = slow.next ;
+            fast = fast.next.next ;
+        }
+
+        ListNode rev_head = rev(slow) ;
+        ListNode temp1 = head ;
+        ListNode temp2 = rev_head ;
+
+        while(temp2 != null){
+            if(temp1.val != temp2.val) return false ;
+
+            temp1 = temp1.next ;
+            temp2 = temp2.next ;
+        }
+        return true ;
+    }
+
+    ListNode rev(ListNode head){
+        ListNode prev = null ;
+        ListNode cur = head ;
+        ListNode next = null ;
+
+        while(cur != null){
+            next = cur.next ;
+            cur.next = prev ;
+            prev = cur ;
+            cur = next ;
+        }
+        return prev ;
+    }
+}
+
