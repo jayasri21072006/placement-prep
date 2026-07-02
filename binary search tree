@@ -363,3 +363,219 @@ Push all left nodes from the current root.
 Pop the top node (this is the next smallest).
 If the popped node has a right child, push all left nodes from that right child.
 Repeat until the stack is empty.
+
+
+
+
+
+
+
+
+
+
+LeetCode Logo
+Problem List
+Debugging...
+Debugging...
+
+
+
+
+
+
+
+
+
+0
+0Streaks
+Miss me yet?
+DCC Badge
+
+avatar
+Avatar
+Jayasri _T
+Access all features with our Premium subscription!
+myLists
+My Lists
+notebook
+Notebook
+progress
+Progress
+points
+Points
+Try New Features
+Orders
+My Playgrounds
+Settings
+Appearance
+Sign Out
+Premium
+Description
+Accepted
+Accepted
+Editorial
+Editorial
+Solutions
+Solutions
+Submissions
+Submissions
+
+
+Code
+Testcase
+Test Result
+Test Result
+669. Trim a Binary Search Tree
+Solved
+Medium
+Topics
+premium lock icon
+Companies
+Given the root of a binary search tree and the lowest and highest boundaries as low and high, trim the tree so that all its elements lies in [low, high]. Trimming the tree should not change the relative structure of the elements that will remain in the tree (i.e., any node's descendant should remain a descendant). It can be proven that there is a unique answer.
+
+Return the root of the trimmed binary search tree. Note that the root may change depending on the given bounds.
+
+ 
+
+Example 1:
+
+
+Input: root = [1,0,2], low = 1, high = 2
+Output: [1,null,2]
+Example 2:
+
+
+Input: root = [3,0,4,null,2,null,null,1], low = 1, high = 3
+Output: [3,2,null,1]
+ 
+
+Constraints:
+
+The number of nodes in the tree is in the range [1, 104].
+0 <= Node.val <= 104
+The value of each node in the tree is unique.
+root is guaranteed to be a valid binary search tree.
+0 <= low <= high <= 104
+ 
+
+Seen this question in a real interview before?
+1/6
+Yes
+No
+Accepted
+351,921/527.2K
+Acceptance Rate
+66.8%
+Topics
+icon
+Companies
+Discussion (56)
+
+Choose a type
+
+
+
+Copyright © 2026 LeetCode. All rights reserved.
+
+6.1K
+
+
+56
+
+5 Online
+Java
+Auto
+
+
+
+
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public TreeNode trimBST(TreeNode root, int low, int high) {
+        if(root==null){
+            return null;
+        }
+
+        if(root.val<low){
+            return trimBST(root.right,low,high);
+        }
+        if(root.val>high){
+            return trimBST(root.left,low,high);
+        }
+
+        root.left=trimBST(root.left,low,high);
+        root.right=trimBST(root.right,low,high);
+         return root;
+        
+    }
+   
+}
+1617181920212223242526272829303132333435151413
+Saved
+Search questions
+
+
+
+
+669. Trim a Binary Search Tree
+Solved
+Medium
+Topics
+premium lock icon
+Companies
+Given the root of a binary search tree and the lowest and highest boundaries as low and high, trim the tree so that all its elements lies in [low, high]. Trimming the tree should not change the relative structure of the elements that will remain in the tree (i.e., any node's descendant should remain a descendant). It can be proven that there is a unique answer.
+
+Return the root of the trimmed binary search tree. Note that the root may change depending on the given bounds.
+
+
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public TreeNode trimBST(TreeNode root, int low, int high) {
+        if(root==null){
+            return null;
+        }
+
+        if(root.val<low){
+            return trimBST(root.right,low,high);
+        }
+        if(root.val>high){
+            return trimBST(root.left,low,high);
+        }
+
+        root.left=trimBST(root.left,low,high);
+        root.right=trimBST(root.right,low,high);
+         return root;
+        
+    }
+   
+}
