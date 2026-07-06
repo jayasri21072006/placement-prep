@@ -1,0 +1,20 @@
+FAANG-Level Backtracking Template (Memorize This)
+
+
+void backtrack(int start) {
+
+    // Base work
+    ans.add(new ArrayList<>(path));
+
+    for (int i = start; i < nums.length; i++) {
+
+        // Choose
+        path.add(nums[i]);
+
+        // Explore
+        backtrack(i + 1);
+
+        // Undo
+        path.remove(path.size() - 1);
+    }
+}
